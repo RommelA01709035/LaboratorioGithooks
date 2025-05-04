@@ -9,6 +9,6 @@ describe("User Model", () => {
 
   it("should find user by ID", () => {
     const user = UserModel.getUserById(1);
-    assert.strictEqual(user.name, "Alice");
+    assert.strictEqual(user.name, "Alie");
   });
 });
