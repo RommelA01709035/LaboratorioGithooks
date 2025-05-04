@@ -1,0 +1,8 @@
+{
+  "name": "mvc-simulated-db",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "node ./test/user.test.js"
+  }
+}
