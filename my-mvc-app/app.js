@@ -1,7 +1,10 @@
-const Routes = require("./routes/userRoutes");
+const express = require("express");
+const cookieParser = require("cookie-parser");
+const userRoutes = require("./routes/userRoutes");
 
-console.log("All users:");
-console.log(Routes.showAllUsers());
+const app = express();
+app.use(express.json());
+app.use(cookieParser());
+app.use("/users", userRoutes);
 
-console.log("\nSingle user:");
-console.log(Routes.showUserById(2));
+module.exports = app;

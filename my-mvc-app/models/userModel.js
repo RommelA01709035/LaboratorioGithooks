@@ -1,8 +1,22 @@
-const users = [
-  { id: 1, name: "Alice" },
-  { id: 2, name: "Bob" }
-];
+const users = [];
 
-exports.getAllUsers = () => users;
+exports.getAll = () => users;
 
-exports.getUserById = id => users.find(user => user.id === id);
+exports.create = (data) => {
+  const newUser = { id: Date.now(), ...data };
+  users.push(newUser);
+  return newUser;
+};
+
+exports.update = (id, data) => {
+  const index = users.findIndex(u => u.id === id);
+  if (index === -1) return null;
+  users[index] = { ...users[index], ...data };
+  return users[index];
+};
+
+exports.delete = (id) => {
+  const index = users.findIndex(u => u.id === id);
+  if (index === -1) return null;
+  return users.splice(index, 1)[0];
+};
