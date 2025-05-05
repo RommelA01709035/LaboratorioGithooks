@@ -1,0 +1,21 @@
+# Ignorar node_modules
+node_modules/
+
+# Archivos de log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Entorno
+.env
+.env.local
+.env.*.local
+
+# Mac
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Directorios de pruebas
+coverage/
